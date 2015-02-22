@@ -5,7 +5,7 @@ Options -Indexes
 RewriteEngine On
 ErrorDocument 403 /403.php
 RewriteCond %{REQUEST_METHOD} ^(HEAD|TRACE|DELETE|TRACK|DEBUG) [NC]
-RewriteRule ^(.*)$ - [F,L]
+RewriteRule ^(.*)$ - [F]
 RewriteCond %{REQUEST_URI} (wp-config\.php|config\.php|bb-config\.php|timthumb\.php|phpthumb\.php|thumb\.php|thumbs\.php|debug\.log) [NC,OR]
 RewriteCond %{REQUEST_URI} \.(htaccess|htpasswd|errordocs|logs|po|mo|ini|inc)$ [NC,OR]
 RewriteCond %{HTTP_USER_AGENT} (;|<|>|'|"|\)|\(|%0A|%0D|%22|%27|%28|%3C|%3E|%00).*(libwww-perl|wget|python|nikto|curl|scan|java|winhttp|HTTrack|clshttp|archiver|loader|email|harvest|extract|grab|miner) [NC,OR]
@@ -51,6 +51,6 @@ RewriteCond %{QUERY_STRING} union([^a]*a)+ll([^s]*s)+elect [NC,OR]
 RewriteCond %{QUERY_STRING} \-[sdcr].*(allow_url_include|allow_url_fopen|safe_mode|disable_functions|auto_prepend_file) [NC,OR]
 RewriteCond %{QUERY_STRING} (;|<|>|'|"|\)|%0A|%0D|%22|%27|%3C|%3E|%00).*(/\*|union|select|insert|drop|delete|update|cast|create|char|convert|alter|declare|order|script|set|md5|benchmark|encode|and|or|if) [NC,OR]
 RewriteCond %{QUERY_STRING} (sp_executesql) [NC]
-RewriteRule ^(.*)$ - [F,L]
+RewriteRule ^(.*)$ - [F]
 </IfModule>
 # END htaccess firewall
